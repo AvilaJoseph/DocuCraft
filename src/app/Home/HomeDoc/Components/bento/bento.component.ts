@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-bento',
   imports: [],
-  templateUrl: './footer.component.html',
+  templateUrl: './bento.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FooterComponent { }
+export class BentoComponent { }
