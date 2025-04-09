@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
+  selector: 'app-doc-menu',
   imports: [],
   templateUrl: './Menu.component.html',
   styleUrl: './Menu.component.css',
