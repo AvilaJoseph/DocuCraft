@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { HeaderComponent } from './Components/header/header.component';
 
 @Component({
   selector: 'app-home-doc',
-  imports: [],
+  imports: [
+    HeaderComponent
+  ],
   templateUrl: `./HomeDoc.component.html`,
-  styleUrl: './HomeDoc.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeDocComponent { }
