@@ -34,6 +34,7 @@
   padding-bottom: 8px;
   grid-auto-rows: max-content;
   gap: 30px;
+  width: 100%;
 }
 
 .Container-icon {
@@ -58,7 +59,7 @@
 }
 
 .Card-text {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
   color: #333;
   margin: 0;
