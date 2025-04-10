@@ -24,7 +24,7 @@
 .form-body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .form-row {
@@ -46,9 +46,9 @@
 }
 
 label {
-  font-size: 14px;
-  font-weight: 500;
-  color: #4a4a4a;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6f6e77;
 }
 
 .label-with-icon {
@@ -73,7 +73,7 @@ input {
 
 input:focus {
   outline: none;
-  border-color: #4b6bfb;
+  border-color: #dcdbdd;
   box-shadow: 0 0 0 2px rgba(75, 107, 251, 0.1);
 }
 
@@ -98,7 +98,7 @@ input::placeholder {
 }
 
 .file-upload-button:hover {
-  border-color: #4b6bfb;
+  border-color: #dcdbdd;
 }
 
 .avatar-placeholder {
@@ -115,13 +115,39 @@ input::placeholder {
 }
 
 .upload-text {
-  font-size: 14px;
+  font-size: 17px;
   color: #1a1a1a;
 }
 
 .or-text {
   color: #6b7280;
 }
+
+.show-option{
+  width: 100%;
+  padding-top: 10px;
+  height: auto;
+  display: flex;
+  gap: 5px;
+}
+
+.show-option a{
+  font-size: 17px;
+  font-weight:lighter;
+}
+
+.show-option-icon{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 1;
+}
+
+.show-option a, .show-option-icon:hover{
+  font-size: 17px;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
