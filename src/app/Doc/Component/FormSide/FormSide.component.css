@@ -123,21 +123,25 @@ input::placeholder {
   color: #6b7280;
 }
 
-.show-option{
+.show-option {
   width: 100%;
   padding-top: 10px;
   height: auto;
   display: flex;
   gap: 5px;
+  align-items: center;
+  cursor: pointer;
 }
 
-.show-option a{
-  font-size: 16.5px;
-  font-weight:400;
-  color:#1a1a1ab0
+.show-option:hover {
+  text-decoration: underline;
 }
 
-.show-option-icon{
+.show-option:hover .show-option-icon {
+  transform: rotate(180deg);
+}
+
+.show-option-icon {
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -145,15 +149,13 @@ input::placeholder {
   opacity: 1;
 }
 
-.show-option a:hover, .show-option-icon:hover{
-  text-decoration: underline;
-  cursor: pointer;
+.show-option-icon:hover {
+  transform: rotate(180deg);
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .form-row .form-group {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
