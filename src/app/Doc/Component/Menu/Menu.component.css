@@ -18,18 +18,13 @@
   opacity: 0.8;
 }
 
-.Menu-Icons:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
 .Container-bottom-back {
   width: 100%;
   display: grid;
   grid-auto-flow: row;
   gap: 12px;
   align-items: center;
-  justify-items: center; 
+  justify-items: center;
 }
 
 .Group-two-icons {
@@ -38,20 +33,34 @@
   padding-top: 30px;
   padding-bottom: 8px;
   grid-auto-rows: max-content;
-  gap: 35px;
+  gap: 30px;
 }
 
 .Container-icon {
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  display: grid;
+  grid-auto-flow: row;
 }
 
+.Container-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
 
-.Container-text{
+.Card-icon {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%; 
+  gap: 4px;
+}
+
+.Card-text {
+  font-size: 12px;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+  text-align: center;
 }
