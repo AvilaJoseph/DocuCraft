@@ -1,3 +1,57 @@
 :host {
   display: block;
 }
+
+.Menu {
+  width: auto;
+  height: auto;
+  padding-top: 8px;
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.Menu-Icons {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.Menu-Icons:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.Container-bottom-back {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 12px;
+  align-items: center;
+  justify-items: center; 
+}
+
+.Group-two-icons {
+  display: grid;
+  place-items: center;
+  padding-top: 30px;
+  padding-bottom: 8px;
+  grid-auto-rows: max-content;
+  gap: 35px;
+}
+
+.Container-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.Container-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+}
