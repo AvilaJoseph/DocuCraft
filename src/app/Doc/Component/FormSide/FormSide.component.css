@@ -67,7 +67,7 @@ input {
   padding: 10px 12px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 17px;
   transition: border-color 0.2s ease;
 }
 
@@ -132,8 +132,9 @@ input::placeholder {
 }
 
 .show-option a{
-  font-size: 17px;
-  font-weight:lighter;
+  font-size: 16.5px;
+  font-weight:400;
+  color:#1a1a1ab0
 }
 
 .show-option-icon{
@@ -144,8 +145,9 @@ input::placeholder {
   opacity: 1;
 }
 
-.show-option a, .show-option-icon:hover{
-  font-size: 17px;
+.show-option a:hover, .show-option-icon:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 
