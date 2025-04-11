@@ -7,26 +7,18 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="nombre">Nombre(s)</label>
-                <input 
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="">
+                <input type="text" id="nombre" name="nombre" placeholder="">
             </div>
             <div class="form-group">
                 <label for="apellido">Apellido(s)</label>
-                <input 
-                    type="text"
-                    id="apellido"
-                    name="apellido"
-                    placeholder="">
+                <input type="text" id="apellido" name="apellido" placeholder="">
             </div>
         </div>
-        
+
         <!-- Foto -->
         <div class="form-group">
             <label for="foto" class="label-with-icon">
-                Foto 
+                Foto
                 <span class="icon-refresh">↻</span>
             </label>
             <div class="file-upload-container">
@@ -34,39 +26,36 @@
                     <div class="avatar-placeholder">
                         <div class="avatar-circle"></div>
                     </div>
-                    <span class="upload-text"><strong>Elija un archivo </strong><span class="or-text">o</span> arrástrelo aquí</span>
+                    <span class="upload-text"><strong>Elija un archivo </strong><span class="or-text">o</span>
+                        arrástrelo aquí</span>
                 </div>
             </div>
         </div>
-        
+
         <!-- Correo electrónico -->
         <div class="form-group">
             <label for="email">Correo electrónico</label>
-            <input 
-                type="email"
-                id="email"
-                name="email"
-                placeholder="">
+            <input type="email" id="email" name="email" placeholder="">
         </div>
-        
+
         <!-- Puesto -->
         <div class="form-group">
             <label for="puesto">Puesto</label>
-            <input 
-                type="text"
-                id="puesto"
-                name="puesto"
-                placeholder="P. ej. diseñador">
+            <input type="text" id="puesto" name="puesto" placeholder="P. ej. diseñador">
         </div>
         <div class="show-option" (click)="toggleAdditionalFields()">
-            <span style="color: #d04a35; font-weight: 500;">{{ showAdditionalFields ? 'Ocultar campos adicionales' : 'Mostrar campos adicionales' }}</span>
-            <img 
-              src="images/icons/chevron-down.svg" 
-              class="show-option-icon" 
-              [ngClass]="{'rotated': showAdditionalFields}" 
-              alt="Mostrar más"
-            >
-          </div>
+            <span style="color: #d04a35; font-weight: 500;">{{ showAdditionalFields ? 'Ocultar campos adicionales' :
+                'Mostrar campos adicionales' }}</span>
+            <ng-container *ngIf="!icons_show; else alternativeIcon">
+                <img src="images/icons/chevron-down.svg" class="show-option-icon"
+                    [ngClass]="{'rotated': showAdditionalFields}" alt="Mostrar más">
+            </ng-container>
+
+            <ng-template #alternativeIcon>
+                <img src="images/icons/chevron-down.svg" class="show-option-icon-reverse"
+                    [ngClass]="{'rotated': !showAdditionalFields}" alt="Icono alternativo">
+            </ng-template>
+        </div>
     </div>
     <ng-container *ngIf="showAdditionalFields">
         <div class="form-body">
@@ -74,19 +63,11 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="nombre">Nombre(s)</label>
-                    <input 
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="">
+                    <input type="text" id="nombre" name="nombre" placeholder="">
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido(s)</label>
-                    <input 
-                        type="text"
-                        id="apellido"
-                        name="apellido"
-                        placeholder="">
+                    <input type="text" id="apellido" name="apellido" placeholder="">
                 </div>
             </div>
         </div>

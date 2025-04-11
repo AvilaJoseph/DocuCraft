@@ -11,10 +11,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormSideComponent { 
-
+  icons_show = false;
   showAdditionalFields = false;
 
   toggleAdditionalFields() {
     this.showAdditionalFields = !this.showAdditionalFields;
+    this.icons_show = !this.icons_show;
   }
 }
