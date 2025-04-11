@@ -18,4 +18,5 @@ export class FormSideComponent {
     this.showAdditionalFields = !this.showAdditionalFields;
     this.icons_show = !this.icons_show;
   }
+
 }
