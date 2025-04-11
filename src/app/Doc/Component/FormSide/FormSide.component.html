@@ -58,12 +58,38 @@
                 name="puesto"
                 placeholder="P. ej. diseñador">
         </div>
-        <div class="show-option">
-            <a href="">Mostrar Campos Adicionales</a>
+        <div class="show-option" (click)="toggleAdditionalFields()">
+            <span style="color: #d04a35; font-weight: 500;">{{ showAdditionalFields ? 'Ocultar campos adicionales' : 'Mostrar campos adicionales' }}</span>
             <img 
-            src="images/icons/chevron-down.svg" 
-            class="show-option-icon"
-            alt="">
-        </div>
+              src="images/icons/chevron-down.svg" 
+              class="show-option-icon" 
+              [ngClass]="{'rotated': showAdditionalFields}" 
+              alt="Mostrar más"
+            >
+          </div>
     </div>
+    <ng-container *ngIf="showAdditionalFields">
+        <div class="form-body">
+            <!-- Nombre y Apellido -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre(s)</label>
+                    <input 
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido(s)</label>
+                    <input 
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        placeholder="">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
 </div>

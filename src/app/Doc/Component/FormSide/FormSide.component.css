@@ -131,6 +131,7 @@ input::placeholder {
   gap: 5px;
   align-items: center;
   cursor: pointer;
+  padding-bottom: 20px;
 }
 
 .show-option:hover {
