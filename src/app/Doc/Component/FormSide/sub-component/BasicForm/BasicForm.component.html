@@ -1,0 +1,156 @@
+<div class="container-form-side">
+    <div class="form-header">
+        <h3 class="form-title">Detalles personales</h3>
+    </div>
+    <div class="form-body">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nombre">Nombre(s)</label>
+                <input type="text" id="nombre" name="nombre" placeholder="">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido(s)</label>
+                <input type="text" id="apellido" name="apellido" placeholder="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="foto" class="label-with-icon">
+                Foto
+                <span class="icon-refresh">↻</span>
+            </label>
+            <div class="file-upload-container">
+                <div class="file-upload-button">
+                    <div class="avatar-placeholder">
+                        <div class="avatar-circle"></div>
+                    </div>
+                    <span class="upload-text"><strong>Elija un archivo </strong><span class="or-text">o</span>
+                        arrástrelo aquí</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="puesto">Puesto</label>
+            <input type="text" id="puesto" name="puesto" placeholder="P. ej. diseñador">
+        </div>
+        <div class="show-option" (click)="toggleAdditionalFields()">
+            <span style="color: #d04a35; font-weight: 500;">{{ showAdditionalFields ? 'Ocultar campos adicionales' :
+                'Mostrar campos adicionales' }}</span>
+            <ng-container *ngIf="!icons_show; else alternativeIcon">
+                <img src="images/icons/chevron-down.svg" class="show-option-icon"
+                    [ngClass]="{'rotated': showAdditionalFields}" alt="Mostrar más">
+            </ng-container>
+
+            <ng-template #alternativeIcon>
+                <img src="images/icons/chevron-down.svg" class="show-option-icon-reverse"
+                    [ngClass]="{'rotated': !showAdditionalFields}" alt="Icono alternativo">
+            </ng-template>
+        </div>
+    </div>
+    <ng-container *ngIf="showAdditionalFields">
+        <div class="form-body">
+            <!-- Teléfono y Dirección -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telefono">Número de teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+34131175971xx">
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Por ejemplo, Calle Vistafranca 10">
+                </div>
+            </div>
+
+            <!-- Código Postal y Ciudad -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codigoPostal">Código Postal</label>
+                    <input type="text" id="codigoPostal" name="codigoPostal" placeholder="por ejemplo, 29003">
+                </div>
+                <div class="form-group">
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="P. ej., Sevilla">
+                </div>
+            </div>
+
+            <!-- Licencia de conducir y Género -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="licencia">Licencia de conducir</label>
+                    <input type="text" id="licencia" name="licencia" placeholder="Por ejemplo, A, B, C, D">
+                </div>
+                <div class="form-group">
+                    <label for="genero" class="label-with-icon">
+                        Género
+                        <!-- <img src="images/icons/settings-cog.svg" alt="Opciones" class="icon-refresh"> -->
+                    </label>
+                    <select id="genero" name="genero" class="form-select">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="otro">Otro</option>
+                        <option value="prefiero_no_decir">Prefiero no decir</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Fecha de nacimiento y Lugar de nacimiento -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fechaNacimiento" class="label-with-icon">
+                        Fecha de nacimiento
+                        <!-- <img src="images/icons/settings-cog.svg" alt="Opciones" class="icon-refresh"> -->
+                    </label>
+                    <div class="date-input-container">
+                        <input type="text" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd / mm / aaaa">
+                        <button type="button" class="calendar-button">
+                            <!-- <img src="images/icons/calendar.svg" alt="Calendario" class="calendar-icon"> -->
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lugarNacimiento">Lugar de nacimiento</label>
+                    <input type="text" id="lugarNacimiento" name="lugarNacimiento" placeholder="Por ejemplo, Valencia">
+                </div>
+            </div>
+
+            <!-- Nacionalidad y Estado civil -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nacionalidad">Nacionalidad</label>
+                    <input type="text" id="nacionalidad" name="nacionalidad" placeholder="P. ej. español">
+                </div>
+                <div class="form-group">
+                    <label for="estadoCivil" class="label-with-icon">
+                        Estado civil
+                        <!-- <img src="images/icons/settings-cog.svg" alt="Opciones" class="icon-refresh"> -->
+                    </label>
+                    <select id="estadoCivil" name="estadoCivil" class="form-select">
+                        <option value="" disabled selected>Elige tu estado civil</option>
+                        <option value="soltero">Soltero/a</option>
+                        <option value="casado">Casado/a</option>
+                        <option value="divorciado">Divorciado/a</option>
+                        <option value="viudo">Viudo/a</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- LinkedIn y Sitio web personal -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="url" id="linkedin" name="linkedin" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="sitioWeb">Sitio web personal</label>
+                    <input type="url" id="sitioWeb" name="sitioWeb" placeholder="">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
