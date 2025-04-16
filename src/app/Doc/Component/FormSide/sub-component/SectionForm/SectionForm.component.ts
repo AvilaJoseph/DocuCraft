@@ -11,14 +11,18 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionFormComponent {
-  
-  icons_show = false;
-  showAdditionalFields = false;
 
-  toggleAdditionalFields() {
-    this.showAdditionalFields = !this.showAdditionalFields;
-    this.icons_show = !this.icons_show;
+  activeSection: string | null = null;
+
+  sections = [
+    { id: 'personal', name: 'Perfil personal' },
+    { id: 'laboral', name: 'Experiencia laboral' },
+    { id: 'habilidades', name: 'Habilidades' },
+    { id: 'educacion', name: 'Educación' }
+  ];
+
+  toggleSection(sectionId: string): void {
+    this.activeSection = this.activeSection === sectionId ? null : sectionId;
   }
-
 
  }

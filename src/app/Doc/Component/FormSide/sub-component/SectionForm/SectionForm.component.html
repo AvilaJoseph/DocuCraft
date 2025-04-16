@@ -1,19 +1,84 @@
-<div class="container-form-side">
-  <div class="form-header">
-    <h3 class="form-title">Detalles personales</h3>
-  </div>
-  <div class="form-body">
-    <h3>Recomendado</h3>
-    <p>Comienza tu CV con nuestras secciones recomendadas 
-      para mostrar una gama completa de habilidades 
-      y experiencia, dando a tus posibles empleadores una 
-      mejor descripción de tus aptitudes.</p>
-    
-    <div class="grid-buttons">
-      <div class="grid-button">Perfil personal</div>
-      <div class="grid-button">Experiencia laboral</div>
-      <div class="grid-button">Habilidades</div>
-      <div class="grid-button">Educación</div>
+<div class="cv-builder">
+  <div class="container-form-side">
+    <div *ngIf="activeSection === 'personal'" style="margin-bottom: 18px;">
+      <div class="form-header">
+        <h3 class="form-title">Perfil personal</h3>
+      </div>
+      <div class="form-body">
+        <p>Párrafo breve en la parte superior de tu CV, en el cuál, resuma tu experiencia relevante y aptitudes en 4 a 6 líneas.</p>
+        <div class="editor-area">
+          <div class="editor-toolbar">
+            <button class="toolbar-btn">B</button>
+            <button class="toolbar-btn">I</button>
+            <button class="toolbar-btn">U</button>
+            <button class="toolbar-btn">≡</button>
+            <button class="toolbar-btn">•</button>
+            <button class="toolbar-btn">🔗</button>
+          </div>
+          <div class="editor-content">
+            <p>Gerente de proyectos con más de 5 años de experiencia en busca de una nueva oportunidad.</p>
+          </div>
+          <div class="editor-footer">
+            <span class="help-text">Recibe ayuda en tu redacción</span>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="activeSection === 'laboral'" class="container-form-side">
+      <div class="form-header">
+        <h3 class="form-title">Experiencia laboral</h3>
+      </div>
+      <div class="form-body">
+        <p>Describe tu experiencia laboral relevante, destacando logros y responsabilidades clave.</p>
+        <div class="editor-area">
+          <div class="editor-content">
+            <p>Añade aquí tus experiencias laborales</p>
+          </div>
+          <button class="add-btn">+ Añadir experiencia</button>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="activeSection === 'habilidades'" >
+      <div class="form-header">
+        <h3 class="form-title">Habilidades</h3>
+      </div>
+      <div class="form-body">
+        <p>Enumera tus habilidades técnicas y personales relevantes para el puesto.</p>
+        <div class="skills-container">
+          <button class="add-btn">+ Añadir habilidad</button>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="activeSection === 'educacion'" class="container-form-side">
+      <div class="form-header">
+        <h3 class="form-title">Educación</h3>
+      </div>
+      <div class="form-body">
+        <p>Incluye tu formación académica, certificaciones y cursos relevantes.</p>
+        <div class="education-container">
+          <button class="add-btn">+ Añadir formación</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-header">
+      <h3 class="form-title">Biblioteca de secciones</h3>
+    </div>
+
+
+    <div class="form-body">
+      <h3>Recomendado</h3>
+      <p>Comienza tu CV con nuestras secciones recomendadas para mostrar una gama completa de habilidades y experiencia, dando a tus posibles empleadores una mejor descripción de tus aptitudes.</p>
+      
+      <div class="grid-buttons">
+        <div class="grid-button" *ngFor="let section of sections" (click)="toggleSection(section.id)" [class.active]="activeSection === section.id">
+          <span>{{ section.name }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
