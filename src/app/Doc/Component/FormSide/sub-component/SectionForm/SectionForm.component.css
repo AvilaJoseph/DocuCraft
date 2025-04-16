@@ -40,14 +40,14 @@
   font-size: 16px;
   line-height: 1.5;
   color: #6f6e77;
-  margin: 0 0 24px 0;
+  /* margin: 0 0 24px 0; */
 }
 
 /* Estilos para los botones de grid */
 .grid-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 8px;
   margin-top: 16px;
 }
 
@@ -55,7 +55,7 @@
   background-color: #f0f0f0;
   border: none;
   border-radius: 25px;
-  padding: 10px 20px;
+  padding: 7px 14px;
   font-size: 14px;
   font-weight: 500;
   color: #333;
@@ -63,7 +63,6 @@
   transition: background-color 0.2s ease;
   text-align: center;
   box-shadow: none;
-  margin-bottom: 18px;
 }
 
 .grid-button:hover {
@@ -80,6 +79,7 @@
   border: 1px solid #e2e2e2;
   border-radius: 6px;
   overflow: hidden;
+  margin-top: 16px;
 }
 
 .editor-toolbar {
